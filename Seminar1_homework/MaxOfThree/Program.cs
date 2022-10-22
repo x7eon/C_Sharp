@@ -13,7 +13,7 @@ double thirdNumDouble;
 
 if(double.TryParse(firstNum, out firstNumDouble) && double.TryParse(secondNum, out secondNumDouble) && double.TryParse(thirdNum, out thirdNumDouble)) 
 {
-    dynamic max = firstNumDouble;
+    double max = firstNumDouble;
     if(secondNumDouble > firstNumDouble) 
     {
         max = secondNumDouble;
