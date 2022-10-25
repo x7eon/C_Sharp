@@ -12,3 +12,19 @@ while(number / 1000 !=0)
 }
 int result = number % 10;
 Console.WriteLine(result);
+
+
+/*
+int number = new Random().Next(1, 10);
+Console.WriteLine(number);
+
+string num = number.ToString();
+if (num.Length < 3)
+{
+    Console.WriteLine("Третьей цифры нет");
+}
+else
+{
+Console.WriteLine(num[2]);
+}
+*/
