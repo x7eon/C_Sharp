@@ -2,7 +2,7 @@
 {
     if (x == 0 || y == 0)
     {
-        Console.WriteLine("Ошибка, x и/или y = 0");
+        Console.WriteLine("Ошибка, точка находится в начале координат");
     }
     if (x > 0 && y < 0) Console.WriteLine("Точка находится в плоскости 4");
     else if (x > 0 && y > 0) Console.WriteLine("Точка находится в плоскости 1");
