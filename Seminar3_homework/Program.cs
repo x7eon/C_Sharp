@@ -1,4 +1,4 @@
-﻿
+﻿/*
 void IsNumberPolindrom ()
 {   
     Console.Clear();
@@ -34,7 +34,7 @@ Console.WriteLine($"Число {number} является полиндромом"
 }
 
 IsNumberPolindrom();
-
+*/
 
 // Вариант без массива
 
@@ -78,3 +78,26 @@ void IsNumberPolindrom()
 
 IsNumberPolindrom();
 */
+
+void IsNumberPolindrom ()
+{   
+    Console.WriteLine("Введите пятизначное число: ");
+    string number = Console.ReadLine() ??"";
+    
+    if (number.Length < 5 || number.Length > 5)
+    {
+    Console.WriteLine("Ошибка ввода, введите пятизначное число!");
+    return;
+    } 
+
+    if (number[0] == number[4] && number[1] == number[3])
+    {
+        Console.WriteLine($"Число {number} полиндром");
+    }
+    else
+    {
+        Console.WriteLine("Число не полиндром");
+    }
+      
+}
+IsNumberPolindrom();
