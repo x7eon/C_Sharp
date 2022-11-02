@@ -61,7 +61,7 @@ Print2dArray(matrix);
 
 */
 
-/*
+
 int[,] pic = new int[,]
 {
  {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 },
@@ -121,7 +121,7 @@ PrintImage(pic);
 FillImage(13, 13);
 PrintImage(pic);
 
-*/
+
 /*
 double Factorial(int num)
 {   
