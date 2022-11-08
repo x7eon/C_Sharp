@@ -29,6 +29,6 @@ bool IsNumberInArray(int[] array, int number)
 
 string PrintAnswer(bool TrueOrFalse)
 {
-    if (TrueOrFalse == true) return $"Массив содержит число {number}";
-    else return $"Массив НЕ содержит число {number}";
+    if (TrueOrFalse == true) return "Да";
+    else return "Нет";
 }
