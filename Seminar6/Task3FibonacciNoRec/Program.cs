@@ -14,17 +14,25 @@ int GetUserNumber(string msg, string errorMsg)
 
 
 void Fibonacci(int num)
-{   
-    int num0 = 0;
-    int num1 = 1;
-    Console.Write($"{num0} ");
-    Console.Write($"{num1} ");
-    for (int i = 0; i < num; i++)
+{
+    if (num == 0) return;
+    else if (num == 1)
     {
-    int num2 = num0 + num1;
-    Console.Write($"{num2} ");
-    num0 = num1;
-    num1 = num2;
+        Console.WriteLine(0);
+        return;
     }
-
+    else
+    {
+        int num0 = 0;
+        int num1 = 1;
+        Console.Write($"{num0} ");
+        Console.Write($"{num1} ");
+        for (int i = 2; i < num; i++)
+        {
+            int num2 = num0 + num1;
+            Console.Write($"{num2} ");
+            num0 = num1;
+            num1 = num2;
+        }
+    }
 }
