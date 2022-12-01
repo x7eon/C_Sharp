@@ -18,7 +18,7 @@ int[,] FillArrayRandom(int[,] collection)
     {
         for (int j = 0; j < collection.GetLength(1); j++)
         {
-            collection[i, j] = new Random().Next(0, 10);
+            collection[i, j] = new Random().Next(2, 10);
         }
     }
     return collection;
@@ -39,14 +39,11 @@ void PrintArray(int[,] col)
 
 int[,] ChangeArray(int[,] arr)
 {
-    for (int i = 0; i < arr.GetLength(0); i++)
+    for (int i = 2; i < arr.GetLength(0); i += 2)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
+        for (int j = 2; j < arr.GetLength(1); j += 2)
         {
-            if (i > 0 && j > 0 && i % 2 == 0 && j % 2 == 0)
-            {
-                arr[i, j] = arr[i, j] * arr[i, j];
-            }
+            arr[i, j] = arr[i, j] * arr[i, j];
         }
     }
     return arr;
