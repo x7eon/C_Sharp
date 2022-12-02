@@ -7,7 +7,7 @@ int[,] array = new int[rows, colums];
 PrintArray(array);
 int[,] arrayRandom = FillArrayRandom(array);
 PrintArray(arrayRandom);
-arrayRandom = ChangeArray(arrayRandom);
+arrayRandom = ChangeElementsWithEvenIndexes(arrayRandom);
 PrintArray(arrayRandom);
 
 
@@ -37,7 +37,7 @@ void PrintArray(int[,] col)
     }
 }
 
-int[,] ChangeArray(int[,] arr)
+int[,] ChangeElementsWithEvenIndexes(int[,] arr)
 {
     for (int i = 2; i < arr.GetLength(0); i += 2)
     {
