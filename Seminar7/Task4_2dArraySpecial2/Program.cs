@@ -1,8 +1,6 @@
-﻿Console.WriteLine("Введите количество строк: ");
+﻿Console.WriteLine("Введите количество строк и столбцов: ");
 int rows = int.Parse(Console.ReadLine() ?? "");
-
-Console.WriteLine("Введите количество столбцов: ");
-int colums = int.Parse(Console.ReadLine() ?? "");
+int colums = rows;
 
 int[,] arrayByUser = CreateAndFillArrayRandom2d(rows, colums, 0, 10);
 PrintArray(arrayByUser);
