@@ -38,7 +38,7 @@ int[,] FillArrayRandom(int[,] collection, int minValue, int maxValue)
     {
         for (int j = 0; j < collection.GetLength(1); j++)
         {
-            arrayByUser[i, j] = new Random().Next(minValue, maxValue + 1);
+            collection[i, j] = new Random().Next(minValue, maxValue + 1);
         }
     }
     return collection;
@@ -59,8 +59,13 @@ void PrintArray(int[,] array)
 int RowWithMinSum(int[,] col)
 
 {
-    int sum = 0;
     int rowWithMinSum = 0;
+    int minSum = 0;
+
+    for (int k = 0; k < col.GetLength(1); k++)
+    {
+        minSum += col[0, k];
+    }
     for (int i = 0; i < col.GetLength(0); i++)
     {
         int temp = 0;
@@ -68,12 +73,9 @@ int RowWithMinSum(int[,] col)
         {
             temp += col[i, j];
         }
-        if (temp > sum)
+        if (temp < minSum)
         {
-            sum = temp;
-        }
-        else
-        {
+            minSum = temp;
             rowWithMinSum = i;
         }
     }
