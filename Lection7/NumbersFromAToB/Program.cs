@@ -3,6 +3,7 @@
 //итеративный подход
 
 /*
+Console.Clear();
 Console.WriteLine("Введите a: ");
 int a = int.Parse(Console.ReadLine()?? "");
 
@@ -27,6 +28,7 @@ string FillStringAToB(int a, int b)
 
 // Рекурсивный подход
 
+Console.Clear();
 Console.WriteLine("Введите a: ");
 int a = int.Parse(Console.ReadLine()?? "");
 

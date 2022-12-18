@@ -3,6 +3,7 @@ int columns = GetUserNumber("Введите число стоблцов: ", "О�
 
 int[,] userArrayRandomElements = CreateAndFillArray(rows, columns, 0, 10);
 PrintArray(userArrayRandomElements);
+
 int[,] changedUserArray = ChangeFirstAndLastRows(userArrayRandomElements);
 Console.WriteLine();
 PrintArray(changedUserArray);
@@ -42,7 +43,6 @@ void PrintArray(int[,] collection)
     Console.WriteLine();
     }
 }
-
 
 int[,] ChangeFirstAndLastRows (int[,] array)
 {
