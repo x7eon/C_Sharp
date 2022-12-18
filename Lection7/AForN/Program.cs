@@ -10,7 +10,9 @@ Console.WriteLine($"{a} в степени {n} = {result}");
 Console.WriteLine();
 int resultRec = PowerForRec(a, n);
 Console.WriteLine($"(рекурсия) {a} в степени {n} = {resultRec}");
-
+Console.WriteLine();
+int resultRecMath = PowerForRecMath(a, n);
+Console.WriteLine($"(рекурсия математич.) {a} в степени {n} = {resultRec}");
 
 //итеративный подход, решение
 
@@ -31,4 +33,13 @@ int PowerForRec(int a, int n)
     return n == 0 ? 1: PowerForRec(a, n - 1)* a;
     //if (n == 0) return 1;
     //else return PowerForRec(a, n - 1) * a;
+}
+
+// Оптимизированное решение
+
+int PowerForRecMath (int a, int n)
+{
+    if (n == 0) return 1;
+    else if (n % 2 == 0) return PowerForRecMath(a * a, n / 2);
+    else return PowerForRecMath(a, n - 1) * a;
 }
