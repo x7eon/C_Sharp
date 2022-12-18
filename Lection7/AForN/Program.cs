@@ -27,7 +27,8 @@ int PowerFor(int a, int n)
 // Рекурсивный подход, решение с помощью рекурсии
 
 int PowerForRec(int a, int n)
-{
-    if (n == 0) return 1;
-    else return PowerForRec(a, n - 1) * a;
+{   
+    return n == 0 ? 1: PowerForRec(a, n - 1)* a;
+    //if (n == 0) return 1;
+    //else return PowerForRec(a, n - 1) * a;
 }
