@@ -5,16 +5,16 @@ Console.WriteLine("Введите a:");
 int a = int.Parse(Console.ReadLine()?? "");
 Console.WriteLine("Введите n:");
 int n = int.Parse(Console.ReadLine()?? "");
-int result = AForN(a, n);
+int result = PowerFor(a, n);
 Console.WriteLine($"{a} в степени {n} = {result}");
 Console.WriteLine();
-int resultRec = AForNRec(a, n);
+int resultRec = PowerForRec(a, n);
 Console.WriteLine($"(рекурсия) {a} в степени {n} = {resultRec}");
 
 
 //итеративный подход, решение
 
-int AForN(int a, int n)
+int PowerFor(int a, int n)
 {
     int result = 1;
     for(int i = 0; i < n; i++)
@@ -26,8 +26,8 @@ int AForN(int a, int n)
 
 // Рекурсивный подход, решение с помощью рекурсии
 
-int AForNRec(int a, int n)
+int PowerForRec(int a, int n)
 {
     if (n == 0) return 1;
-    else return AForN(a, n - 1) * a;
+    else return PowerForRec(a, n - 1) * a;
 }
