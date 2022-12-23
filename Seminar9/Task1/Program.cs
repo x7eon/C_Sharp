@@ -6,7 +6,7 @@ string NumbersFrom1ToN(int start, int n)
     if (start > n) return String.Empty;
     else
     {
-        return $"{start}" + NumbersFrom1ToN(start + 1, n);
+        return $"{start} " + NumbersFrom1ToN(start + 1, n);
     }
 }
 
