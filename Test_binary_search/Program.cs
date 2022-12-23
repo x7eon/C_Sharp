@@ -9,7 +9,11 @@ array = FillArrayFrom1ToN(array);
 PrintArray(array);
 
 int answer = FindIndexBinary(array, value);
-Console.WriteLine($"Индекс элемента {value} = {answer}");
+if (answer == -1) Console.WriteLine("Искомого элемента в массиве нет");
+else
+{
+    Console.WriteLine($"Индекс элемента {value} = {answer}");
+}
 
 int[] FillArrayFrom1ToN(int[] col)
 {
