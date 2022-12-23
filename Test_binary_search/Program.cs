@@ -11,8 +11,6 @@ PrintArray(array);
 int answer = FindIndexBinary(array, value);
 Console.WriteLine($"Индекс элемента {value} = {answer}");
 
-
-
 int[] FillArrayFrom1ToN(int[] col)
 {
     int count = 1;
@@ -24,14 +22,13 @@ int[] FillArrayFrom1ToN(int[] col)
     return col;
 }
 
-
 void PrintArray(int[] collection)
 {
     for (int i = 0; i < collection.Length; i++)
     {
         Console.Write($"{collection[i]} ");
     }
-Console.WriteLine();
+    Console.WriteLine();
 }
 
 int FindIndexBinary(int[] array, int num)
@@ -55,5 +52,5 @@ int FindIndexBinary(int[] array, int num)
             endPoint = mid - 1;
         }
     }
-return -1;
+    return -1;
 }
