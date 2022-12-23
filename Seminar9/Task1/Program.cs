@@ -1,18 +1,14 @@
 ﻿int num = GetUserNumber("Введите число", "Ошибка ввода: ");
+Console.WriteLine(NumbersFrom1ToN(1, num));
 
-for (int i = 1; i <= num; i++)
-{
-    Console.WriteLine(String.Join(" ", i));
+string NumbersFrom1ToN(int start, int n)
+{   
+    if (start > n) return String.Empty;
+    else
+    {
+        return $"{start}" + NumbersFrom1ToN(start + 1, n);
+    }
 }
-
-
-string NumbersFrom1ToN(int n)
-{
-    int i = 1;
-    if (i <= n) return $"{i}" + NumbersFrom1ToN(n - 1);
-    else return String.Empty;
-}
-
 
 int GetUserNumber(string msg, string errorMsg)
 {
